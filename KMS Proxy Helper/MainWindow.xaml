@@ -1,0 +1,58 @@
+﻿<Window x:Class="KMS_Proxy_Helper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KMS_Proxy_Helper"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="270" Width="622" ResizeMode="CanMinimize" Icon="/Resources/KMSLogo.ico">
+    <Grid>
+        <StackPanel>
+
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock  TextWrapping="Wrap" Text="Host"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="36" IsEnabled="False"/>
+                <TextBox Name="TextBox_Host" Grid.Column="1" TextWrapping="Wrap" Text=""  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="36" Margin="0,0,10,0"/>
+            </Grid>
+
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock  TextWrapping="Wrap" Text="Port"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="36" IsEnabled="False"/>
+                <TextBox Name="TextBox_Port" Grid.Column="1" TextWrapping="Wrap" Text=""  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="36" Margin="0,0,10,0"/>
+            </Grid>
+
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="50" Margin="0,40,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="Button_SetProxy" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="36" Margin="5,0,5,0">
+                    Ändern
+                </Button>
+                <Button Name="Button_Reset" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="36" Margin="5,0,5,0">
+                    Zurücksetzen
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Name="TextBlock_ChangeLog" HorizontalAlignment="Stretch"/>
+
+                <CheckBox Name="CheckBox_AutoCheck" Grid.Column="1" FontSize="16" IsChecked="False" HorizontalAlignment="Right" Margin="0,0,10,0" ToolTip="Checkt automatisch ob der Proxy vom System zurückgesetzt wurde, und setzt ihn automatisch wieder.">
+                    Auto Check
+                </CheckBox>
+            </Grid>
+        </StackPanel>
+        <Ellipse x:Name="StatusIndicator" Height="15" Width="15" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5" Fill="#FFE0C40B"/>
+    </Grid>
+</Window>
